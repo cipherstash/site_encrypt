@@ -92,7 +92,7 @@ defmodule SiteEncrypt.Acme.Client do
 
       process_new_order(session, order, config)
     else
-      {:error, message} ->
+      {:error, message, session} ->
         {:error, message, session}
     end
   end
